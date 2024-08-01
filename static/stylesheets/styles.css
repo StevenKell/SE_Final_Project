@@ -1,0 +1,36 @@
+body{
+    background-color: aqua;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+#header-text{
+    font-size: xx-large;
+    text-shadow: 3px 3px pink;
+    padding: 1px;
+}
+#subheader-text{
+    font-size: x-large;
+}
+
+
+.crrtscore{
+    text-align: left;
+}
+#scoreboard{
+    font-size: small;
+}
+#questionmark{
+    display: block;
+    position: relative;
+    width: 50%;
+    height: auto;
+left: 25%;
+}
+#outerblock{
+    background-color: rgb(235, 195, 18);
+}
+#innerblock{
+    background-color: rgb(212, 48, 149);
+}
