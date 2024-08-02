@@ -1,36 +1,48 @@
-body{
+body {
     background-color: aqua;
     height: 100%;
     align-content: center;
     text-align: center;
 }
 
-#header-text{
+#header-text {
     font-size: xx-large;
     text-shadow: 3px 3px pink;
     padding: 1px;
 }
-#subheader-text{
+
+#subheader-text {
     font-size: x-large;
 }
 
 
-.crrtscore{
+.crrtscore {
     text-align: left;
 }
-#scoreboard{
+
+#scoreboard {
     font-size: small;
 }
-#questionmark{
+
+#questionmark {
     display: block;
     position: relative;
     width: 50%;
     height: auto;
-left: 25%;
+    left: 25%;
 }
-#outerblock{
+
+#outerblock {
     background-color: rgb(235, 195, 18);
 }
-#innerblock{
+
+#innerblock {
     background-color: rgb(212, 48, 149);
+}
+
+.submitScoreBTN {
+    position: relative;
+    display: none;
+    text-align: center;
+    left: 25%;
 }
