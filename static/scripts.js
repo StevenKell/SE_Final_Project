@@ -11,7 +11,7 @@ let msg = document.querySelector('p.statusText')
 let userInput = document.querySelector('input');
 let currntScore = document.querySelector('.crrntscore');
 let resetbtn = document.querySelector('.resetbtn')
-let submitScoreBTN = document.querySelector('.submitScoreBTN')
+let submitScorebtn = document.getElementById('submitScorebtn')
 let historyHighS = document.querySelector('.highscore')
 /////////////////////////////////////
 /////Add selector for input box here.
@@ -49,13 +49,13 @@ checkbtn.addEventListener('click', function () {
         //////////////////
         if (Number(userInput.value) === rondomNum) {
             msg.textContent = `Congrats! you win the game! \n
-            Now hit the button to submit it to the score board!`;
+            Now hit the button to submit your info to the winners roster!`;
             msg.style.color = 'green';
             msg.style.fontSize = 'medium';
             document.getElementById("questionmark").src = "static/images/you-win-neon-signs-style-text-vector.jpg";
             userInput.style.display = "none";
             checkbtn.style.display = "none";
-            submitScoreBTN.style.display = "block";
+            submitScorebtn.style.display = "block";
             if (currentScore > historyHighScore) {
                 historyHighScore = currentScore;
                 historyHighS.textContent = String(historyHighScore);
@@ -69,7 +69,7 @@ checkbtn.addEventListener('click', function () {
                 msg.textContent = 'Wrong number! too high! try smaller value';
                 msg.style.color = 'yellow';
                 msg.style.fontSize = 'small';
-                currentScore = currentScore - 1;
+                currentScore -= 1;
                 currntScore.textContent = String(currentScore);
                 guesscompare = userInput;
                 guesshistory.push(userInput.value);
@@ -82,7 +82,7 @@ checkbtn.addEventListener('click', function () {
                 msg.textContent = 'Wrong number! too low! try a larger value';
                 msg.style.color = 'yellow';
                 msg.style.fontSize = 'small';
-                currentScore = currentScore - 1;
+                currentScore -= 1;
                 currntScore.textContent = String(currentScore);
 
 

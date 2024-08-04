@@ -40,9 +40,9 @@ body {
     background-color: rgb(212, 48, 149);
 }
 
-.submitScoreBTN {
+#submitScorebtn {
     position: relative;
     display: none;
     text-align: center;
-    left: 25%;
 }
+
