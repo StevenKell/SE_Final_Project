@@ -13,9 +13,7 @@ let currntScore = document.querySelector('.crrntscore');
 let resetbtn = document.querySelector('.resetbtn')
 let submitScorebtn = document.getElementById('submitScorebtn')
 let historyHighS = document.querySelector('.highscore')
-/////////////////////////////////////
-/////Add selector for input box here.
-////////////////////////////////////
+
 
 
 //////////////////
@@ -107,6 +105,3 @@ checkbtn.addEventListener('click', function () {
 }
 
 )
-/////////////////////////////////////////
-// Add event handler for submit score button
-///////////////////////////////////////

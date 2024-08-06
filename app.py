@@ -11,11 +11,13 @@ class Data(db.Model):
     __tablename__="data"
     id=db.Column(db.Integer,primary_key=True)
     name_=db.Column(db.String(120))
+    age_=db.Column(db.Integer)
     city_=db.Column(db.String(120))
     email_=db.Column(db.String(120))
     
-    def __init__(self, name_, city_, email_):
+    def __init__(self, name_, age_, city_, email_):
         self.name_=name_
+        self.age_=age_
         self.city_=city_
         self.email_=email_
         
@@ -28,16 +30,18 @@ def index():
 def roster():
     if request.method=='POST':
         name=request.form["name_name"]
+        age=request.form["age_name"]
         city=request.form["city_name"]
         email=request.form["email_name"]
         
-        data=Data(name, city, email )
+        
+        data=Data(name, age, city, email )
         db.session.add(data)
         db.session.commit()
             
+        retrieveData = Data.query.all()
         
-        
-        return render_template("roster.py")
+        return render_template("roster.html", retrieveData = retrieveData)
 
 
 if __name__=='__main__':

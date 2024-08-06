@@ -45,17 +45,21 @@
                         <button type="button" class="checkbtn shadow btn btn-info">check</button>
                         <!--
         ///////////////////////////////////////////////
-        Input form for players name.
+        Input forms for players info.
         ///////////////////////////////////////////////
         -->
                         <div id="submitScorebtn">
                             <form action="{{url_for('roster')}}" method="POST">
                                 <label for="name_name" class="shadow center-text">Enter your name:</label><br>
                                 <input type="text" id="name_name" name="name_name" value="John"><br>
+                                <label for="age_name" class="shadow center-text">Enter your age:</label><br>
+                                <input type="number" id="age_name" name="age_name" value="25"><br>
                                 <label for="city_name" class="shadow center-text">Enter your city:</label><br>
-                                <input type="text" id="email_name" name="city_name" value="@gmail.com"><br>
+                                <input type="text" id="city_name" name="city_name" value="NYC"><br>
                                 <label for="email_name" class="shadow center-text">Enter your email:</label><br>
-                                <input type="text" id="city_name" name="email_name" value="NYC"><br>
+                                <input type="text" id="email_name" name="email_name" value="@gmail.com"><br>
+                                
+                                
                                 <input type="submit" value="Submit" class="submitScorebtn shadow btn btn-info">
                             </form>
                         </div>
